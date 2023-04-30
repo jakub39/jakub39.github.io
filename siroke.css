@@ -68,15 +68,15 @@
     opacity: 0.8;
 }
 .carousel-caption {
-    bottom: 7%;
+    bottom: 15%;
     left: 0px;
     right: 0px;
 }
 .carousel-item h5 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
-    background-color: rgb(255, 0, 0, 0.4);
-    padding: 10px;
+    background-color: rgb(255, 0, 0, 0.5);
+    padding: 15px;
     backdrop-filter: blur(6px);
 }
 .carousel-control-next-icon {
@@ -86,6 +86,33 @@
 .carousel-control-prev-icon {
     position: absolute;
     left: 20px;
+}
+.sipka {
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 11%;
+}
+.sipka img {
+    height: 55px;
+}
+
+#dole {
+    padding-top: 25px;
+}
+
+.ikona i {
+    font-size: 8rem;
+    text-align: center;
+    color: rgb(0, 110, 255);
+}
+.ikona p {
+    text-align: center;
+    font-size: 2.1rem; 
+    font-weight: 600;
+    padding: 15px;
+    color: rgb(31, 31, 31);
 }
 
 
@@ -118,33 +145,7 @@
     text-decoration-color: rgb(0, 110, 255);
     text-decoration-thickness: 1px;
 }
-.sipka {
-    height: 50px;
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    bottom: 5px;
-}
-.sipka img {
-    height: 100%;
-}
 
-#dole {
-    padding-top: 20px;
-}
-
-.ikona i {
-    font-size: 8rem;
-    text-align: center;
-    color: rgb(0, 110, 255);
-}
-.ikona p {
-    text-align: center;
-    font-size: 2.1rem; 
-    font-weight: 600;
-    padding: 15px;
-    color: rgb(31, 31, 31);
-}
 
 
 

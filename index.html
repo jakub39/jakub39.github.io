@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="siroke.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md t">
+    <nav class="navbar navbar-expand-md" id="t">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="obrazky/logo.png" alt="logo" class="logo">
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <button class="sipka col-12">
-                <a href="#dole">
+                <a href="#nic">
                     <img src="obrazky/sipka.png" alt="sipka">
                 </a>
             </button>
@@ -89,7 +89,8 @@
             </button>
         </div>
     </div>
-    <div class="container-fluid" id="dole">
+    <div id="nic"></div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-6 ikona justify-content-center">
                 <i class="fa-solid fa-clock col-12"></i>
@@ -100,12 +101,26 @@
                 <p class="col-12">ŠIROKÉ<br>818</p>
             </div>
         </div>
+        <div class="row">
+            <p class="col-12 p1">
+                <i class="fa-solid fa-wifi"></i> <br>
+                V celom objekte okrem bazénovej časti je free WiFi <br>
+            </p>
+            <p class="col-12 p1">
+                <i class="fa-solid fa-temperature-half"></i> <br>
+                Teplota vody v bazéne je <span>28°C</span><br>
+                Teplota vody vo vírivke je <span>36°C</span> 
+            </p>
+        </div>
+        <div class="row justify-content-center mapa">
+            <iframe class="col-12 col-md-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10014.317906991477!2d20.93569964648039!3d49.006119247295935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e5f22ef5af537%3A0x5bc22bdcedda47ed!2sObecn%C3%A9%20%C5%A1portov%C3%A9%20a%20oddychove%20centrum!5e0!3m2!1ssk!2ssk!4v1683048513649!5m2!1ssk!2ssk"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 
 
 
 
-
+<script src="scroll.js"></script>
 <script src="https://kit.fontawesome.com/2e7cadd98d.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>

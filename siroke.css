@@ -8,11 +8,7 @@ body {
 
 /*NAVBAR*/ 
 .logo {
-    height: 120px;
-}
-.logo:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
+    height: 110px;
 }
 .navbar {
     border-bottom: 3px solid red;
@@ -38,15 +34,30 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     margin: 0px 10px;
-    text-decoration: underline;
-    text-decoration-color: rgb(0, 110, 255);
-    color: rgb(31, 31, 31)
+    padding: 0px;
+    color: rgb(31, 31, 31);
+    position: relative;
+    display: inline-block;
 }
 .nav-link:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
-    color: rgb(96, 96, 96);
-    text-decoration-thickness: 2px;
+    color: rgb(255, 0, 0);
+    
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 1px;
+    left: 1px;
+    background-color: rgb(0, 110, 255);
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /*TEXTY*/
@@ -75,11 +86,11 @@ body {
     right: 0px;
 }
 .carousel-item h5 {
-    font-size: 2rem;
-    font-weight: 600;
-    background-color: rgb(255, 0, 0, 0.5);
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(255,0,0,0.4) 48%, rgba(255,0,0,0) 100%);
     padding: 15px;
-    backdrop-filter: blur(6px);
+    color: white;
 }
 .carousel-control-next-icon {
     position: absolute;
@@ -94,14 +105,23 @@ body {
     border: none;
     background-color: transparent;
     position: absolute;
-    bottom: 11%;
+    bottom: 8%;
+    animation-name: sipka;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}   
+@keyframes sipka {
+    0% {bottom: 8%;}
+    30% {bottom: 10%;}
+    75% {bottom: 10%;}
+    100% {bottom: 8%;}
 }
 .sipka img {
     height: 55px;
 }
 
 #nic {
-    padding: 70px;
+    padding: 65px;
 }
 
 .ikona i {
@@ -119,7 +139,7 @@ body {
 .p1 {
     text-align: center;
     font-size: 2rem;
-    padding: 25px 30px;
+    padding: 35px 30px;
     font-weight: 600;
 }
 .p1 i {
@@ -129,6 +149,15 @@ body {
 .p1 span {
     color: red;
     font-weight: 700;
+}
+.p2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 35px 30px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: red;
+    padding: 30px 120px;
 }
 .mapa {
     padding: 20px;
@@ -170,8 +199,31 @@ body {
     text-decoration-thickness: 1px;
 }
 
-
-
+/*Časti OŠOC*/
+.casti {
+    padding-top: 150px;
+}
+.casti .row {
+    justify-content: center;
+    text-align: justify;
+    padding: 10px 0px;
+}
+.casti p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.casti p span {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 110, 255);
+    font-size: 1.3rem;
+}
+.casti p i {
+    font-size: 0.5rem;
+    vertical-align: middle;
+    padding-right: 5px;
+    color: rgb(0, 110, 255);
+}
 
 
 /*MEDIA SCREEN*/
@@ -213,6 +265,17 @@ body {
     .p1 {
         font-size: 1.3rem;
     }
+    .p2 {
+        padding: 30px 60px;
+        font-size: 1.6rem;
+    }
+    .casti p {
+        font-size: 1.1rem;
+    }
+    .carousel-item h5 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
 }
 
 @media screen and (max-width:424px) {
@@ -221,6 +284,12 @@ body {
     }
     .cennik .row {
         padding: 0px;
+    }
+    .casti p {
+        font-size: 1rem;
+    }
+    .casti p span {
+        font-size: 1.1rem;
     }
 }
 
@@ -236,6 +305,10 @@ body {
     }
     .p1 {
         font-size: 1.7rem;
+    }
+    .p2 {
+        padding: 30px 20px;
+        font-size: 1.3rem;
     }
 }
 

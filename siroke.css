@@ -19,7 +19,6 @@ body {
     padding: 0px 15px;
     z-index:100 ;
 }
-
 .navbar-toggler-icon {
     background-image: url("obrazky/hamburger.svg");
 }
@@ -34,13 +33,14 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     margin: 0px 10px;
-    padding: 0px;
     color: rgb(31, 31, 31);
     position: relative;
     display: inline-block;
 }
 .nav-link:hover {
     color: rgb(255, 0, 0);
+    transform: scale(1.1);
+    transition: 0.25s;
     
 }
 .nav-link::after {
@@ -49,7 +49,7 @@ body {
     width: 100%;
     transform: scaleX(0);
     height: 3px;
-    bottom: 1px;
+    bottom: 8px;
     left: 1px;
     background-color: rgb(0, 110, 255);
     transform-origin: bottom right;
@@ -66,6 +66,7 @@ body {
     font-weight: 700;
     padding: 10px 30px;
     color: rgb(31, 31, 31);
+    letter-spacing: 3px;
 }
 
 /*MAIN*/
@@ -88,9 +89,11 @@ body {
 .carousel-item h5 {
     font-size: 2.2rem;
     font-weight: 700;
+    backdrop-filter: blur(2px);
     background: radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(255,0,0,0.4) 48%, rgba(255,0,0,0) 100%);
     padding: 15px;
     color: white;
+    letter-spacing: 2px;
 }
 .carousel-control-next-icon {
     position: absolute;
@@ -199,41 +202,111 @@ body {
     text-decoration-thickness: 1px;
 }
 
-/*Časti OŠOC*/
-.casti {
-    padding-top: 150px;
+
+/*ČASTI OŠOC*/
+.text1 {
+    color: black;
+    text-align: center;
+    padding: 40px 0px;
 }
-.casti .row {
-    justify-content: center;
+.text1 p {
     text-align: justify;
-    padding: 10px 0px;
-}
-.casti p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    padding: 0px 120px;
 }
-.casti p span {
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: rgb(0, 110, 255);
-    font-size: 1.3rem;
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+    position: relative;
+    opacity: 0.6;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.casti p i {
-    font-size: 0.5rem;
-    vertical-align: middle;
-    padding-right: 5px;
-    color: rgb(0, 110, 255);
+.bgimg-1 div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.bgimg-1 div h1 {
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 4px solid red;
+    backdrop-filter: blur(8px);
+}
+.bgimg-1 {
+    background-image: url("obrazky/6dokopy.png");
+    min-height: 100%;
+}
+.bgimg-2 {
+    background-image: url("obrazky/bazen.png");
+    min-height: 350px;
+}
+.bgimg-3 {
+    background-image: url("obrazky/fitko.png");
+    min-height: 350px;
+}
+.bgimg-4 {
+    background-image: url("obrazky/hokej.png");
+    min-height: 350px;
+}
+.bgimg-5 {
+    background-image: url("obrazky/ihrisko.png");
+    min-height: 350px;
+}
+.bgimg-6 {
+    background-image: url("obrazky/bowling.png");
+    min-height: 350px;
+}
+.bgimg-7 {
+    background-image: url("obrazky/izba.png");
+    min-height: 350px;
+} 
 
 
 /*MEDIA SCREEN*/
+@media screen and (max-width:1023px) {
+    .cennik table td, .cennik table th {
+        font-size: 0.9rem;
+    }
+    .cennik table caption {
+        font-size: 1.2rem;
+    }
+
+    .ikona i {
+        font-size: 6rem;
+    }
+    .p1 {
+        font-size: 1.7rem;
+    }
+    .p2 {
+        padding: 30px 20px;
+        font-size: 1.3rem;
+    }
+
+    .text1 p {
+        padding: 0px 100px;
+        font-size: 1.1rem;
+    }
+}
+
 @media screen and (max-width:767px) {
     .collapse {
         justify-content: start;
     }
+    .logo {
+        height: 100px;
+    }
     .nadpis1 {
         font-size: 1.8rem;
     }
+
     .cennik .row {
         padding: 0px 40px;
     }
@@ -247,9 +320,7 @@ body {
     .prvyr table:first-child {
         border: none;
     }
-    .logo {
-        height: 100px;
-    }
+
     .prazdny {
         display: none;
     }
@@ -269,13 +340,27 @@ body {
         padding: 30px 60px;
         font-size: 1.6rem;
     }
-    .casti p {
-        font-size: 1.1rem;
-    }
     .carousel-item h5 {
         font-size: 2rem;
-        font-weight: 600;
     }
+
+    .text1 {
+        padding: 30px 0px;
+    }
+    .text1 p {
+        font-size: 1rem;
+        padding: 0px 30px;
+    }
+    .text1 h1 {
+        font-size: 1.8rem;
+    }
+    .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+        min-height: 300px;
+    }
+    .bgimg-1 div h1 {
+        font-size: 3rem;
+    }
+
 }
 
 @media screen and (max-width:424px) {
@@ -285,32 +370,23 @@ body {
     .cennik .row {
         padding: 0px;
     }
-    .casti p {
-        font-size: 1rem;
+
+    .text1 {
+        padding: 20px 0px;
     }
-    .casti p span {
-        font-size: 1.1rem;
+    .text1 p {
+        padding: 0px 15px;
+        font-size: 0.9rem;
+    }
+    .text1 h1 {
+        font-size: 1.5rem;
+    }
+    .bgimg-1 div h1 {
+        font-size: 2.4rem;
     }
 }
 
-@media screen and (max-width:1023px) {
-    .cennik table td, .cennik table th {
-        font-size: 0.9rem;
-    }
-    .cennik table caption {
-        font-size: 1.2rem;
-    }
-    .ikona i {
-        font-size: 6rem;
-    }
-    .p1 {
-        font-size: 1.7rem;
-    }
-    .p2 {
-        padding: 30px 20px;
-        font-size: 1.3rem;
-    }
-}
+
 
 
 /*FOOTER*/

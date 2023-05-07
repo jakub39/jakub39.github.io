@@ -41,24 +41,8 @@ body {
     color: rgb(255, 0, 0);
     transform: scale(1.1);
     transition: 0.25s;
-    
 }
-.nav-link::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 8px;
-    left: 1px;
-    background-color: rgb(0, 110, 255);
-    transform-origin: bottom right;
-    transition: transform 0.35s ease-out;
-}
-.nav-link:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
+
 
 /*TEXTY*/
 .nadpis1 {
@@ -160,7 +144,7 @@ body {
     font-weight: 600;
     text-decoration: underline;
     text-decoration-color: red;
-    padding: 30px 120px;
+    padding: 30px 150px;
 }
 .mapa {
     padding: 20px;
@@ -269,6 +253,24 @@ body {
     min-height: 350px;
 } 
 
+/*KONTAKT*/
+.kontakt {
+    padding-top: 150px;
+}
+.ikony i {
+    text-align: center;
+    color: red;
+    font-size: 8rem;
+    padding: 10px;
+}
+.ikony p {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
 
 /*MEDIA SCREEN*/
 @media screen and (max-width:1023px) {
@@ -282,12 +284,15 @@ body {
     .ikona i {
         font-size: 6rem;
     }
+    .ikona p {
+        font-size: 2rem;
+    }
     .p1 {
         font-size: 1.7rem;
     }
     .p2 {
-        padding: 30px 20px;
-        font-size: 1.3rem;
+        padding: 30px 90px;
+        font-size: 1.5rem;
     }
 
     .text1 p {
@@ -334,11 +339,11 @@ body {
         font-size: 3rem;
     }
     .p1 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     .p2 {
-        padding: 30px 60px;
-        font-size: 1.6rem;
+        padding: 30px 40px;
+        font-size: 1.4rem;
     }
     .carousel-item h5 {
         font-size: 2rem;
@@ -383,6 +388,29 @@ body {
     }
     .bgimg-1 div h1 {
         font-size: 2.4rem;
+    }
+    .p2 {
+        padding: 30px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .nav-link::after {
+        content:'';
+        position: absolute;
+        transform: scaleX(0);
+        width: 100%;
+        height: 3px;
+        bottom: 8px;
+        left: 1px;
+        background-color: rgb(0, 110, 255);
+        transform-origin: bottom right;
+        transition: transform 0.35s ease-out;
+    }
+    .nav-link:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
 

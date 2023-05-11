@@ -7,3 +7,4 @@ window.addEventListener("scroll", function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     header.style.opacity = 0.75 + scrollTop  / 1100; 
 });
+

@@ -31,7 +31,7 @@
     </nav>
     <div class="container-fluid kontakt">
         <h1 class="nadpis1">KONTAKT</h1>
-        <div class="col-12 col-lg-4 ikony float-lg-start">
+        <div class="col-12 col-md-5 ikony float-md-start">
             <div class="row">
                 <i class="fa-solid fa-at col-12"></i>
                 <p class="col-12">obec@siroke.sk</p>
@@ -41,8 +41,30 @@
                 <p class="col-12">051 7911 102</p>
             </div>
         </div>
-        <div class="col-12 col-lg-8 formular">
-            tu bude formular vedla ale nechce sa mi ho robit                
+        <div class="col-12 col-md-7 formular">
+            <form>
+                <label for="meno" class="col-12">
+                    <input type="text" name="meno" id="meno" required minlength="5" maxlength="128" placeholder="Meno">
+                    <span>Meno</span>
+                </label>
+                <label for="email" class="col-12">
+                    <input type="email" name="email" id="email" required maxlength="256" placeholder="E-mail">
+                    <span>E-mail</span>
+                </label>
+                <label for="cislo" class="col-12">
+                    <input type="text" name="cislo" id="cislo" minlength="7" placeholder="Telefónne číslo">
+                    <span>Telefónne číslo (voliteľné)</span>
+                </label>
+                <label for="predmet" class="col-12">
+                    <input type="text" name="predmet" id="predmet" required minlength="3" maxlength="128" placeholder="Predmet">
+                    <span>Predmet</span>
+                </label>
+                <label for="sprava" class="col-12">
+                    <textarea name="sprava" id="sprava" rows="5" required minlength="5" placeholder="Správa" class="col-12"></textarea>
+                    <span>Správa</span>
+                </label>
+                <button class="col-12" type="button">ODOSLAŤ</button>
+            </form>
         </div>
     </div>
     

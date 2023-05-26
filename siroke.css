@@ -11,7 +11,8 @@ body {
 
 /*NAVBAR*/ 
 #logo {
-    height: 120px;
+    height: 110px;
+    transition: 0.3s;
 }
 .navbar {
     box-shadow: 2px 1px 12px 5px #6e6e6e4d;
@@ -33,17 +34,15 @@ body {
     justify-content: right;
 }
 .nav-link {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2rem;
     margin: 0px 10px;
-    color: rgb(31, 31, 31);
+    color: black;
     position: relative;
     display: inline-block;
 }
 .nav-link:hover {
     color: rgb(255, 0, 0);
-    transform: scale(1.05);
-    transition: 0.25s;
 }
 
 
@@ -63,22 +62,35 @@ body {
     background-color: black;
     box-shadow: 0px 3px 20px 2px rgb(137, 137, 137);
 }
+
+.zobrazenie {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.9s all ease;
+}
+  
+.zobrazenie.active{
+    transform: translateY(0);
+    opacity: 1;
+} 
+
 /*CAROUSEL*/
 .carousel-item img{
     height: 100vh;
     object-fit: cover;
-    opacity: 0.65;
+    opacity: 0.8;
 }
 .carousel-caption {
-    bottom: 15%;
+    bottom: 14%;
     left: 0px;
     right: 0px;
 }
 .carousel-item h5 {
     font-size: 2.2rem;
     font-weight: 700;
-    backdrop-filter: blur(2px);
-    background: radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(255,0,0,0.4) 48%, rgba(255,0,0,0) 100%);
+    backdrop-filter: blur(1px);
+    background: radial-gradient(circle, rgba(0, 110, 255, 0.6) 0%, rgba(0, 110, 255, 0.4) 20%, rgba(255, 0, 0, 0) 100%);
     padding: 15px;
     color: white;
     letter-spacing: 2px;
@@ -96,16 +108,16 @@ body {
     border: none;
     background-color: transparent;
     position: absolute;
-    bottom: 8%;
+    bottom: 7%;
     animation-name: sipka;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
 }   
 @keyframes sipka {
-    0% {bottom: 8%;}
-    30% {bottom: 10%;}
-    75% {bottom: 10%;}
-    100% {bottom: 8%;}
+    0% {bottom: 7%;}
+    30% {bottom: 9%;}
+    75% {bottom: 9%;}
+    100% {bottom: 7%;}
 }
 .sipka img {
     height: 55px;
@@ -166,13 +178,13 @@ body {
 .karticka {
     float: left;
     width: 33.333%;
-    padding: 10px;
+    margin: 10px;
 }
-.karticka:hover img {
+.karticka img:hover {
     box-shadow: 4px 4px 0px 4px red;
     transition: 0.35s;
-    transform: scale(0.98);
     cursor: pointer;
+    filter: none;
 }
 .karticka img {
     width: 100%;
@@ -199,11 +211,9 @@ body {
     font-weight: 600;
     color: red;
 }
-.cennik .row {
-    margin: auto;
-}
-.cennik table {
+.cennik table { 
     margin-bottom: 25px;
+    width: 100%;
 }
 .cennik table td, .cennik table th {
     padding: 4px 10px;
@@ -212,12 +222,18 @@ body {
     color: rgb(31, 31, 31);
 }
 .cennik table .cena {
-    font-weight: 650;
-    text-align: right;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
     text-decoration: underline;
     text-decoration-color: rgb(0, 110, 255);
     text-decoration-thickness: 1px;
 }
+.tabulky {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 
 /*ČASTI OŠOC*/
@@ -259,37 +275,47 @@ body {
     backdrop-filter: blur(8px);
 }
 .bgimg-1 {
-    background-image: url("obrazky/6dokopy.png");
+    background-image: url("obrazky/6dokopy.jpg");
     min-height: 100%;
 }
 .bgimg-2 {
-    background-image: url("obrazky/bazen.png");
+    background-image: url("obrazky/bazen.jpg");
     min-height: 350px;
 }
 .bgimg-3 {
-    background-image: url("obrazky/fitko.png");
+    background-image: url("obrazky/fitko.jpg");
     min-height: 350px;
 }
 .bgimg-4 {
-    background-image: url("obrazky/hokej.png");
+    background-image: url("obrazky/hokej.jpg");
     min-height: 350px;
 }
 .bgimg-5 {
-    background-image: url("obrazky/ihrisko.png");
+    background-image: url("obrazky/ihrisko.jpg");
     min-height: 350px;
 }
 .bgimg-6 {
-    background-image: url("obrazky/bowling.png");
+    background-image: url("obrazky/bowling.jpg");
     min-height: 350px;
 }
 .bgimg-7 {
-    background-image: url("obrazky/izba.png");
+    background-image: url("obrazky/izba.jpg");
     min-height: 350px;
 } 
 
 
 
 /*GALERIA*/
+.galeria {
+    padding-top: 150px;
+}
+.galeria img{
+    padding: 10px 0px;
+}
+.galeria img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
 
 
 /*KONTAKT*/
@@ -330,20 +356,23 @@ body {
     padding: 12px;
     margin-top:25px;
     border: none;
-    border-left: 3px solid red;
     border-radius: 6px;
-    background-color: rgb(240, 240, 240);
+    border-left: 3px solid red;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.344);
+    background-color: rgb(245, 245, 245);
 }
 .formular input::placeholder, textarea::placeholder{
     opacity:0;
 }
+
+
 .formular input:focus, .formular textarea:focus {
     border-bottom: 3px solid red;
     border-left: none;
     outline: none;
     position: relative;
     animation-name: skuska;
-    animation-duration: 0.2s;
+    animation-duration: 0.15s;
 }
 @keyframes skuska {
     0% {
@@ -378,32 +407,21 @@ body {
     background: rgb(0, 110, 255);
     color: white;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     border: none;
     cursor:pointer;
     border-radius:8px;
 }
 .formular button:hover {
-    transform: scale(0.95);
     transition: 0.2s;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .formular label:focus-within > span,
 .formular input:not(:placeholder-shown) + span, .formular textarea:not(:placeholder-shown) + span{
     color: rgb(0, 110, 255);
     transform:translateY(0px);
-}
-
-/*GALERIA*/
-.galeria {
-    padding-top: 150px;
-}
-.galeria img{
-    padding: 10px 0px;
-}
-.galeria img:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
 }
 
 
@@ -454,10 +472,10 @@ body {
     .nadpis1 {
         font-size: 2.2rem;
     }
-
-    .cennik .row {
-        padding: 0px 40px;
+    #nic {
+        padding: 30px;
     }
+
     .cennik table td, .cennik table th {
         padding: 4px;
         font-size: 0.9rem;
@@ -495,8 +513,8 @@ body {
         height: 45vh;
     }
     .karticka {
-        min-width: 90%;
-        padding: 10px;
+        min-width: 85%;
+        padding: 0px;
     }
 
     .text1 {
@@ -534,9 +552,6 @@ body {
     .cennik table td, .cennik table th {
         font-size: 0.8rem;
     }
-    .cennik .row {
-        padding: 0px;
-    }
 
     .text1 {
         padding: 20px 0px;
@@ -560,24 +575,6 @@ body {
     }
 }
 
-@media screen and (min-width:768px) {
-    .nav-link::after {
-        content:'';
-        position: absolute;
-        transform: scaleX(0);
-        width: 100%;
-        height: 3px;
-        bottom: 8px;
-        left: 1px;
-        background-color: rgb(0, 110, 255);
-        transform-origin: bottom right;
-        transition: transform 0.35s ease-out;
-    }
-    .nav-link:hover::after{
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-}
 
 
 

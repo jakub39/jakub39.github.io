@@ -12,17 +12,17 @@ function scrollFunction() {
 }
 
 let header = document.getElementById("t");
-header.style.opacity = 0.75; //priehladnost navbaru 75%
+header.style.opacity = 0.8; //priehladnost navbaru 75%
 
 //znizenie priehladnosti na 0% pri scrolle
 window.addEventListener("scroll", function () {
     let header = document.getElementById("t");
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    header.style.opacity = 0.75 + scrollTop / 900;
+    header.style.opacity = 0.8 + scrollTop / 900;
 });
 
 
-//Zobraznenie elementov
+//Zobraznenie elementov animacia zdola
 function reveal() {
     var reveals = document.querySelectorAll(".zobrazenie");
   

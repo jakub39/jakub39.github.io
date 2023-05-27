@@ -3,24 +3,13 @@ logo.style.height = "110px";
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     logo.style.height = "80px";
     } 
     else {
     logo.style.height = "110px";
     }
 }
-
-let header = document.getElementById("t");
-header.style.opacity = 0.8; //priehladnost navbaru 75%
-
-//znizenie priehladnosti na 0% pri scrolle
-window.addEventListener("scroll", function () {
-    let header = document.getElementById("t");
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    header.style.opacity = 0.8 + scrollTop / 900;
-});
-
 
 //Zobraznenie elementov animacia zdola
 function reveal() {
@@ -38,5 +27,16 @@ function reveal() {
       }
     }
   }
-  
 window.addEventListener("scroll", reveal);
+
+
+//Navbar na hlavnej stranke
+let header = document.getElementById("t");
+header.style.opacity = 0.8; //priehladnost navbaru 25%
+
+//znizenie priehladnosti na 0% pri scrolle
+window.addEventListener("scroll", function () {
+    let header = document.getElementById("t");
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    header.style.opacity = 0.8 + scrollTop / 900;
+});

@@ -22,6 +22,12 @@
 }
 .navbar-toggler {
     border: none;
+    transform: rotate(90deg);
+    transition: 0.25s;
+}
+.collapsed {
+    transform: rotate(0deg);
+    transition: 0.25s;
 }
 .collapse {
     display: flex;
@@ -43,7 +49,7 @@
 .navbar:hover .nav-link:hover {
     color: black;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) { /*podciarknutie linku*/
     .navbar:hover .nav-link:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
@@ -64,8 +70,6 @@
 }
 
 
-
-/*TEXTY*/
 .nadpis1 {
     font-size: 2.7rem;
     font-weight: 700;
@@ -73,7 +77,7 @@
     color: rgb(31, 31, 31);
     letter-spacing: 3px;
 }
-/*ANIMACIA*/
+/*ANIMACIA na zobrazenie dole*/
 .zobrazenie {
     position: relative;
     transform: translateY(150px);
@@ -135,7 +139,7 @@
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
 }   
-@keyframes sipka {
+@keyframes sipka { /*animacia na sipku nech sa hybe hore dole*/
     0% {bottom: 7%;}
     30% {bottom: 9%;}
     75% {bottom: 9%;}
@@ -194,6 +198,7 @@
     padding: 0px;
     opacity: 0.98;
 }
+/*karticky*/
 .karticky {
     display: flex;
     overflow-x: auto;
@@ -245,9 +250,9 @@
     margin-bottom: 50px;
     width: 100%;
     backdrop-filter: blur(5px);
-    box-shadow: 3px 3px 10px 1px rgba(168, 168, 168, 0.6);
+    box-shadow: 3px 3px 10px 2px rgba(168, 168, 168, 0.6);
     background-color: rgb(255, 255, 255, 0.4);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 .cennik table td, .cennik table th {
     padding: 4px 10px;
@@ -270,6 +275,10 @@
     display: flex;
     justify-content: space-around;
 }
+.pravyc table:last-of-type {
+    padding-bottom: 50px;
+}
+/*uprava tabuliek nech su prekne aj na mobile aj na pc*/
 @media screen and (min-width:768px) {
     .lavyc table, .pravyc table {
         margin-top: 150px;
@@ -280,7 +289,19 @@
     .lavyc table:first-of-type {
         margin-top: 0px;
     }
-    
+    .pravyc table:first-of-type {
+        opacity: 1;
+        transform: none;
+    }
+    .cennik .pravyc table {
+        box-shadow: -3px -3px 10px 2px rgba(168, 168, 168, 0.6);
+    }
+}
+@media screen  and (max-width:768px){
+    .lavyc table {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /*ČASTI OŠOC*/
@@ -297,7 +318,7 @@
     font-weight: 400;
     padding: 0px 180px;
 }
-/*PARALAX EFEKT*/
+/*paralax efekt*/
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
     position: relative;
     opacity: 0.6;
@@ -421,17 +442,15 @@
 .formular input::placeholder, textarea::placeholder{
     opacity:0;
 }
-
-
 .formular input:focus, .formular textarea:focus {
     border-bottom: 3px solid red;
     border-left: none;
     outline: none;
     position: relative;
-    animation-name: skuska;
+    animation-name: border;
     animation-duration: 0.15s;
-}
-@keyframes skuska {
+} 
+@keyframes border { /*animacia na border*/
     0% {
         border-bottom: 0px solid red;
         border-left: 3px solid red;
@@ -471,7 +490,7 @@
 }
 .formular button:hover {
     transition: 0.35s;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.6);
     border: 3px solid rgb(0, 110, 255);
     color: rgb(0, 110, 255);
 }
@@ -576,6 +595,9 @@
         padding: 0px;
         scroll-snap-align: start;
     }
+    .karticky::-webkit-scrollbar {
+        display: none;
+    }
     
 
     .text1 {
@@ -609,7 +631,7 @@
         padding-bottom: 20px;
     }
     .ikony {
-        border-bottom: 2px solid rgb(0, 110, 255);
+        border-bottom: 2px solid black;
     }
 }
 
@@ -647,12 +669,32 @@
 .footer {
     margin: auto;
     width: 100%;
-    height: 150px;  
     background-color: rgb(58, 58, 58);
     display: flex;
+    text-align: center;
+    margin-top: 20px;
 }
 .footer a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+}
+.footer p:first-of-type i {
+    font-size: 2.2rem;
+    padding: 20px 10px 0px 10px;
+}
+.fa-facebook:hover {
+    color: rgb(0, 130, 255);
+}
+.fa-instagram:hover {
+    background: -webkit-linear-gradient(45deg, rgb(240, 237, 51) 0%,rgb(230, 154, 60) 25%,rgb(237, 71, 96) 50%,rgb(204, 35, 102) 75%,rgb(188, 24, 136) 100%); 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.fa-twitter:hover {
+    color: rgb(0, 180, 255);
+}
+.footer p:last-of-type {
+    font-size: 1rem;
+    color: white;
 }

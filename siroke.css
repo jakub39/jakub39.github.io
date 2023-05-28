@@ -25,6 +25,10 @@
     transform: rotate(90deg);
     transition: 0.25s;
 }
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
 .collapsed {
     transform: rotate(0deg);
     transition: 0.25s;
@@ -99,7 +103,8 @@
 .main {
     background-image: url(obrazky/wave-haikei.svg);
     background-attachment: fixed;
-    background-size: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 /*carousel*/
 .carousel-item img{
@@ -238,6 +243,7 @@
     background-image: url(obrazky/wave-haikeired.svg);
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .cennik table caption {
     display: block;
@@ -298,7 +304,7 @@
     }
 }
 @media screen  and (max-width:768px){
-    .lavyc table {
+    .lavyc table:nth-child(1), .lavyc table:nth-child(2) {
         opacity: 1;
         transform: none;
     }
@@ -309,8 +315,10 @@
     color: black;
     text-align: center;
     padding: 40px 0px;
-    background-image: url(obrazky/blob-scene-haikeired.svg);
-    background-size: cover;
+    background-image: url(obrazky/cervenezboku.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 .text1 p {
     text-align: justify;
@@ -378,8 +386,9 @@
 /*GALERIA*/
 .galeria {
     padding-top: 150px;
-    background-image: url(obrazky/blob-scene-haikei.svg);
+    background-image: url(obrazky/wave-haikei.svg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 .galeria img{
@@ -396,9 +405,11 @@
 /*KONTAKT*/
 .kontakt {
     padding-top: 150px;
+    padding-bottom: 40px;
     background-image: url(obrazky/wave-haikeired.svg);
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 /*ikony*/
 .ikony {
@@ -602,7 +613,6 @@
 
     .text1 {
         padding: 30px 0px;
-        background-image: none;
     }
     .text1 p {
         font-size: 1rem;
@@ -632,6 +642,11 @@
     }
     .ikony {
         border-bottom: 2px solid black;
+    }
+
+    .main, .cennik, .kontakt, .galeria {
+        background-size: contain;
+        background-position: bottom;
     }
 }
 
@@ -672,7 +687,6 @@
     background-color: rgb(58, 58, 58);
     display: flex;
     text-align: center;
-    margin-top: 20px;
 }
 .footer a {
     color: white;

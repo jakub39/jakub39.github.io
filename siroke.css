@@ -6,13 +6,12 @@
 body {
     scroll-behavior: smooth;
     background-image: url(obrazky/Sprinkle.svg);
-    background-attachment: fixed;
-    background-size: cover;
+    background-size: cover 100%;
 }
 
 /*NAVBAR*/ 
 #logo {
-    height: 100px;
+    height: 90px;
     transition: 0.3s;
 }
 .navbar {
@@ -84,9 +83,10 @@ body {
 .nadpis1 {
     font-size: 2.7rem;
     font-weight: 700;
-    padding: 10px 30px;
+    padding: 20px;
     color: rgb(31, 31, 31);
     letter-spacing: 3px;
+    text-align: center;
 }
 /*ANIMACIE*/
 /*zdola*/
@@ -125,66 +125,55 @@ body {
     transform: translateX(0);
     opacity: 1;
 }
-  
 
 /*MAIN*/
-.slideshow {
-    padding: 0px;
-    margin: 0px;
-    background-color: black;
-    box-shadow: 0px 3px 20px 2px rgb(137, 137, 137);
-}
-
-/*carousel*/
-.carousel-item img{
+.intro {
+    background-color: white;
+    overflow-x: hidden;
     height: 100vh;
-    object-fit: cover;
-    opacity: 0.8;
+    background-image: url(obrazky/budovapoz.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
-.carousel-caption {
-    bottom: 14%;
-    left: 0px;
-    right: 0px;
+.intro:first-child {
+    padding-top: 150px;
 }
-.carousel-item h5 {
-    font-size: 2.2rem;
+.intro h2 {
+    font-size: 4rem;
+    z-index: 5;
     font-weight: 700;
-    backdrop-filter: blur(1px);
-    background: radial-gradient(circle, rgba(0, 110, 255, 0.6) 0%, rgba(0, 110, 255, 0.4) 20%, rgba(255, 0, 0, 0) 100%);
-    padding: 15px;
-    color: white;
-    letter-spacing: 2px;
+    color: rgb(31, 31, 31);
 }
-.carousel-control-next-icon {
-    position: absolute;
-    right: 20px;
-}
-.carousel-control-prev-icon {
-    position: absolute;
-    left: 20px;
+.intro h1 {
+    font-size: 6rem;
+    color: red;
+    font-weight: 800;
 }
 .sipka {
     height: 50px;
     border: none;
     background-color: transparent;
     position: absolute;
-    bottom: 7%;
+    bottom: 8%;
     animation-name: sipka;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    z-index: 5;
+} 
+.sipka img {
+    height: 55px;
 }   
+
 @keyframes sipka { /*animacia na sipku nech sa hybe hore dole*/
     0% {bottom: 8%;}
     30% {bottom: 10%;}
     75% {bottom: 10%;}
     100% {bottom: 8%;}
 }
-.sipka img {
-    height: 55px;
-}
 
 #nic {
-    padding: 45px;
+    padding: 50px;
 }
 
 .ikona i {
@@ -205,7 +194,7 @@ body {
     padding: 35px 30px;
     font-weight: 600;
 }
-.p1 i {
+.p1 i, .p2 i {
     font-size: 4rem;
     color: red;
 }
@@ -218,8 +207,6 @@ body {
     font-size: 1.8rem;
     padding: 35px 30px;
     font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: red;
     padding: 30px 150px;
 }
 .mapa {
@@ -267,7 +254,7 @@ body {
 
 /*CENNÍK*/
 .cennik {
-    padding-top: 150px;
+    padding-top: 130px;
     overflow-x: hidden;
 }
 .cennik table caption {
@@ -336,11 +323,47 @@ body {
 }
 
 /*ČASTI OŠOC*/
+.casti {
+    background-color: white;
+}
+/*carousel*/
+.slideshow {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+.carousel-item img{
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.carousel-caption {
+    bottom: 15%;
+    left: 0px;
+    right: 0px;
+}
+.carousel-item h5 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    backdrop-filter: blur(1px);
+    background: radial-gradient(circle, rgba(0, 110, 255, 0.6) 0%, rgba(0, 110, 255, 0.4) 20%, rgba(255, 0, 0, 0) 100%);
+    padding: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+.carousel-control-next-icon {
+    position: absolute;
+    right: 20px;
+}
+.carousel-control-prev-icon {
+    position: absolute;
+    left: 20px;
+}  
 .text1 {
     color: black;
     text-align: center;
-    padding: 40px 0px;
-    background-image: url(obrazky/cervenezboku.png);
+    padding: 50px 0px;
+    background-image: url(obrazky/modrezboku.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: top right;
@@ -351,38 +374,18 @@ body {
     font-weight: 400;
     padding: 0px 180px;
 }
-.casti {
-    background-color: white;
+#jedna {
+    bottom: 40px;
+    position: absolute;
 }
 /*paralax efekt*/
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
     position: relative;
     opacity: 0.6;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.bgimg-1 div{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bgimg-1 div h1 {
-    color: rgb(0, 0, 0);
-    font-size: 4rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 25px 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 4px solid red;
-    backdrop-filter: blur(8px);
-}
-.bgimg-1 {
-    background-image: url(obrazky/6dokopy.jpg);
-    min-height: 100%;
 }
 .bgimg-2 {
     background-image: url(obrazky/bazen.jpg);
@@ -410,9 +413,9 @@ body {
 } 
 
 
-/*GALERIA*/
+/*GALÉRIA*/
 .galeria {
-    padding-top: 150px;
+    padding-top: 130px;
 }
 .galeria img{
     padding: 10px 0px;
@@ -427,7 +430,7 @@ body {
 
 /*KONTAKT*/
 .kontakt {
-    padding-top: 150px;
+    padding-top: 130px;
     padding-bottom: 40px;
 }
 /*ikony*/
@@ -539,13 +542,6 @@ body {
 
 /*MEDIA SCREEN*/
 @media screen and (max-width:1023px) {
-    .cennik table td, .cennik table th {
-        font-size: 0.9rem;
-    }
-    .cennik table caption {
-        font-size: 1.2rem;
-    }
-
     .ikona i {
         font-size: 6rem;
     }
@@ -559,6 +555,15 @@ body {
         padding: 30px 90px;
         font-size: 1.5rem;
     }
+
+
+    .cennik table td, .cennik table th {
+        font-size: 0.9rem;
+    }
+    .cennik table caption {
+        font-size: 1.2rem;
+    }
+
 
     .text1 p {
         padding: 0px 100px;
@@ -583,34 +588,23 @@ body {
     .nadpis1 {
         font-size: 2.2rem;
     }
-    #nic {
-        padding: 80px;
+    .intro h2 {
+        font-size: 3rem;
+        margin: 0px 70px;
     }
-
-    .cennik table td, .cennik table th {
-        padding: 4px;
-        font-size: 0.9rem;
+    .intro:first-child {
+        padding-top: 130px;
     }
-    .pravyc table:nth-child(2) {
-        position: relative;
-        transform: translateX(-150px);
-        opacity: 0;
-        transition: 1s all ease;
+    .intro h1 {
+        font-size: 4rem;
     }
-    .pravyc table:nth-child(2).active3 {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
-
-
     .ikona i {
         font-size: 4.5rem;
     }
     .ikona p{
         font-size: 1.5rem;
     }
-    .p1 i {
+    .p1 i, .p2 i {
         font-size: 3rem;
     }
     .p1 {
@@ -619,9 +613,6 @@ body {
     .p2 {
         padding: 30px 40px;
         font-size: 1.4rem;
-    }
-    .carousel-item h5 {
-        font-size: 2rem;
     }
     .mapa iframe {
         height: 45vh;
@@ -637,6 +628,26 @@ body {
     }
     .karticky::-webkit-scrollbar {
         display: none;
+    }
+
+
+    .cennik table td, .cennik table th {
+        padding: 4px;
+        font-size: 0.9rem;
+    }
+    .pravyc table:nth-child(2) {
+        position: relative;
+        transform: translateX(-150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .pravyc table:nth-child(2).active3 {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .lavyc table:nth-child(3) {
+        opacity: 1;
+        transform: none;
     }
     
 
@@ -655,6 +666,9 @@ body {
     }
     .bgimg-1 div h1 {
         font-size: 3rem;
+    }
+    .carousel-item h5 {
+        font-size: 2rem;
     }
 
     .formular form{
@@ -675,10 +689,6 @@ body {
 }
 
 @media screen and (max-width:424px) {
-    .cennik table td, .cennik table th {
-        font-size: 0.8rem;
-    }
-
     .text1 {
         padding: 20px 0px;
     }
@@ -698,6 +708,13 @@ body {
     }
     .mapa iframe {
         height: 40vh;
+    }
+    .intro h2 {
+        margin: 0px 10px;
+    }
+
+    .cennik table td, .cennik table th {
+        font-size: 0.8rem;
     }
 }
 

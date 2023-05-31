@@ -12,7 +12,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-md" id="t">
+    <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="obrazky/logo.png" alt="logo" id="logo">
@@ -30,70 +30,21 @@
             </div>
         </div>
     </nav>
-    <!--Content - slideshow-->
-    <div class="container-fluid slideshow">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3500">
-                    <img src="obrazky/bazen.jpg" class="d-block w-100" alt="bazen">
-                    <div class="carousel-caption d-md-block">
-                        <h5>BAZÉN</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/fitko4.jpg" class="d-block w-100" alt="fitko">
-                    <div class="carousel-caption d-md-block">
-                        <h5>FITKO</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/hokej.jpg" class="d-block w-100" alt="hokej">
-                    <div class="carousel-caption d-md-block">
-                        <h5>ĽADOVÁ PLOCHA</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/ihrisko.jpg" class="d-block w-100" alt="futbal">
-                    <div class="carousel-caption d-md-block">
-                        <h5>FUTBALOVÉ IHRISKO</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/squash.jpg" class="d-block w-100" alt="squash">
-                    <div class="carousel-caption d-md-block">
-                        <h5>SQUASH</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/bowling.jpg" class="d-block w-100" alt="bowling">
-                    <div class="carousel-caption d-md-block">
-                        <h5>BOWLING</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3500">
-                    <img src="obrazky/izba2.jpg" class="d-block w-100" alt="ubytovanie">
-                    <div class="carousel-caption d-md-block">
-                        <h5>UBYTOVANIE</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="sipka col-12">
-                <a href="#nic">
-                    <img src="obrazky/sipka.png" alt="sipka">
-                </a>
-            </button>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!--Content-->
+    <div class="main">
+        <div class="intro">
+            <h2>OBECNÉ ŠPORTOVÉ</h2>
+            <h2>A</h2>
+            <h2>ODDYCHOVÉ CENTRUM</h2>
+            <h1>ŠIROKÉ</h1>
         </div>
+        <button class="sipka col-12">
+            <a href="#nic">
+                <img src="obrazky/sipka2.png" alt="sipka">
+            </a>
+        </button>
     </div>
     <div id="nic"></div>
-    <!--Content-->
     <div class="container-fluid">
         <div class="row zobrazenie2">
             <!--ikony-->
@@ -125,17 +76,23 @@
         <!--oznam-->
         <div class="row zobrazenie">
             <p class="col-12 p2">
+                <i class="fa-solid fa-info"></i> <br>
                 Z technických príčin ľadová plocha ešte nie je zaľadnená,
-                preto sa môžu prísť deti kolobežkovať a korčuľovať
-                na kolieskových korčuliach
+                preto sa môžu prísť deti kolobežkovať a korčuľovať na kolieskových korčuliach
+            </p>
+        </div>
+        <div class="row zobrazenie">
+            <p class="col-12 p2">
+                Prosíme rodičov malých detí, aby rešpektovali, že plavecký bazén v OŠOC je z hľadiska hygienických noriem určený pre deti
+                až od troch rokov, preto môže byť mladším deťom vstup do bazéna zamedzený
             </p>
         </div>
         <!--karticky-->
         <div class="karticky zobrazenie">
             <div class="karticka">
-                <a href="galeria.html">
-                    <img src="obrazky/galeria.jpg" alt="galeria">
-                    <p>GALÉRIA</p>
+                <a href="cennik.html">
+                    <img src="obrazky/cennik.jpg" alt="cennik">
+                    <p>CENNÍK</p>
                 </a>
             </div>
             <div class="karticka">
@@ -145,9 +102,9 @@
                 </a>
             </div>
             <div class="karticka">
-                <a href="cennik.html">
-                    <img src="obrazky/cennik.jpg" alt="cennik">
-                    <p>CENNÍK</p>
+                <a href="galeria.html">
+                    <img src="obrazky/galeria.jpg" alt="galeria">
+                    <p>GALÉRIA</p>
                 </a>
             </div>
         </div>

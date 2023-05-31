@@ -1,5 +1,5 @@
 let logo = document.getElementById("logo");
-logo.style.height = "110px";
+logo.style.height = "90px";
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -7,7 +7,7 @@ function scrollFunction() {
     logo.style.height = "75px";
     } 
     else {
-    logo.style.height = "100px";
+    logo.style.height = "90px";
     }
 }
 
@@ -66,7 +66,7 @@ function reveal3() {
 }
 window.addEventListener("scroll", reveal3);
 
-//Navbar na hlavnej stranke
+//Navbar na carouseli
 let header = document.getElementById("t");
 header.style.opacity = 0.8; //priehladnost navbaru 25%
 

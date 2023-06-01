@@ -1,3 +1,4 @@
+//Zmensenie navbaru pri scrolle
 let logo = document.getElementById("logo");
 logo.style.height = "90px";
 

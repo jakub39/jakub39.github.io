@@ -4,9 +4,23 @@
 }
 
 body {
-    scroll-behavior: smooth;
     background-image: url(obrazky/Sprinkle.svg);
     background-size: cover 100%;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: red; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
 }
 
 /*NAVBAR*/ 
@@ -22,7 +36,8 @@ body {
     padding: 0px 15px;
     z-index: 100;
 }
-/*HAMBURGER*/
+
+/*hamburger*/
 .navbar-toggler-icon {
     background-image: url(obrazky/hamburger.svg);
 }
@@ -43,6 +58,7 @@ body {
     display: flex;
     justify-content: right;
 }
+
 .nav-link {
     font-weight: 600;
     font-size: 1.2rem;
@@ -53,7 +69,7 @@ body {
     padding: 8px;
 }
 .navbar-nav:hover .nav-link {
-    color: rgb(110, 110, 110);
+    color: rgb(135, 135, 135);
     transition: 0.3s;
 }
 .navbar:hover .nav-link:hover {
@@ -78,8 +94,6 @@ body {
         transition: transform 0.3s ease-out;
     }
 }
-
-
 .nadpis1 {
     font-size: 2.7rem;
     font-weight: 700;
@@ -88,6 +102,7 @@ body {
     letter-spacing: 3px;
     text-align: center;
 }
+
 /*ANIMACIE*/
 /*zdola*/
 .zobrazenie {
@@ -101,6 +116,7 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
+
 /*zlava*/
 .zobrazenie2 {
     position: relative;
@@ -108,11 +124,11 @@ body {
     opacity: 0;
     transition: 1s all ease;
 }
-  
 .zobrazenie2.active2 {
     transform: translateX(0);
     opacity: 1;
 }
+
 /*zprava*/
 .zobrazenie3 {
     position: relative;
@@ -120,7 +136,6 @@ body {
     opacity: 0;
     transition: 1s all ease;
 }
-  
 .zobrazenie3.active3 {
     transform: translateX(0);
     opacity: 1;
@@ -135,20 +150,50 @@ body {
     background-size: cover;
     background-position: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.intro:first-child {
-    padding-top: 150px;
-}
-.intro h2 {
-    font-size: 4rem;
+.intro h1 { 
     z-index: 5;
-    font-weight: 700;
-    color: rgb(31, 31, 31);
-}
-.intro h1 {
-    font-size: 6rem;
-    color: red;
+    font-size: 4rem;
     font-weight: 800;
+    color: rgb(31, 31, 31);
+    animation-name: zaciatok;
+    animation-delay: 0.8s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+@keyframes zaciatok {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.intro h1 span {
+    color: red;
+    font-size: 5rem;
+    animation-name: zaciatok2;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes zaciatok2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .sipka {
     height: 50px;
@@ -166,16 +211,25 @@ body {
 }   
 
 @keyframes sipka { /*animacia na sipku nech sa hybe hore dole*/
-    0% {bottom: 8%;}
-    30% {bottom: 10%;}
-    75% {bottom: 10%;}
-    100% {bottom: 8%;}
+    0% {
+        bottom: 8%;
+    }
+    25% {
+        bottom: 10%;
+    }
+    75% {
+        bottom: 10%;
+    }
+    100% {
+        bottom: 8%;
+    }
 }
 
 #nic {
     padding: 50px;
 }
 
+/*ikony*/
 .ikona i {
     font-size: 8rem;
     text-align: center;
@@ -188,6 +242,7 @@ body {
     padding: 15px;
     color: rgb(31, 31, 31);
 }
+
 .p1 {
     text-align: center;
     font-size: 2rem;
@@ -209,6 +264,7 @@ body {
     font-weight: 600;
     padding: 30px 150px;
 }
+
 .mapa {
     margin-bottom: 30px;
     background-color: black;
@@ -218,6 +274,11 @@ body {
     padding: 0px;
     opacity: 0.98;
 }
+
+.oznamy {
+    padding: 20px 0px;
+}
+
 /*karticky*/
 .karticky {
     display: flex;
@@ -326,6 +387,7 @@ body {
 .casti {
     background-color: white;
 }
+
 /*carousel*/
 .slideshow {
     padding: 0px;
@@ -375,9 +437,10 @@ body {
     padding: 0px 180px;
 }
 #jedna {
-    bottom: 40px;
+    bottom: 50px;
     position: absolute;
 }
+
 /*paralax efekt*/
 .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
     position: relative;
@@ -412,7 +475,6 @@ body {
     min-height: 350px;
 } 
 
-
 /*GALÉRIA*/
 .galeria {
     padding-top: 130px;
@@ -427,13 +489,12 @@ body {
     opacity: 1;
 }
 
-
 /*KONTAKT*/
 .kontakt {
     padding-top: 130px;
     padding-bottom: 40px;
 }
-/*ikony*/
+
 .ikony {
     padding-top: 20px;
 }
@@ -449,6 +510,7 @@ body {
     font-weight: 500;
     padding: 10px 0px 60px 0px;
 }
+
 /*formular*/
 .formular {
     display: flex;
@@ -456,12 +518,10 @@ body {
 .formular form{
     padding: 0px 35px;
 }
-
 .formular label{
     margin-bottom:15px;
     position:relative;
 }
-
 .formular input, .formular textarea{
     width:100%;
     padding: 12px;
@@ -481,8 +541,9 @@ body {
     outline: none;
     position: relative;
     animation-name: border;
-    animation-duration: 0.15s;
+    animation-duration: 0.2s;
 } 
+
 @keyframes border { /*animacia na border*/
     0% {
         border-bottom: 0px solid red;
@@ -502,6 +563,7 @@ body {
     }
 
 }
+
 .formular span{
     position:absolute;
     top:0px;
@@ -531,13 +593,12 @@ body {
     border: 3px solid rgb(0, 110, 255);
     animation: none;
 }
-
+/*vysunutie labelu*/
 .formular label:focus-within > span,
 .formular input:not(:placeholder-shown) + span, .formular textarea:not(:placeholder-shown) + span{
     color: rgb(0, 110, 255);
     transform:translateY(0px);
 }
-
 
 
 /*MEDIA SCREEN*/
@@ -588,15 +649,11 @@ body {
     .nadpis1 {
         font-size: 2.2rem;
     }
-    .intro h2 {
-        font-size: 3rem;
-        margin: 0px 70px;
-    }
-    .intro:first-child {
-        padding-top: 130px;
-    }
     .intro h1 {
-        font-size: 4rem;
+        font-size: 2.8rem;
+    }
+    .intro h1 span {
+        font-size: 3.5rem;
     }
     .ikona i {
         font-size: 4.5rem;
@@ -671,6 +728,7 @@ body {
         font-size: 2rem;
     }
 
+
     .formular form{
         padding: 0px 15px;
     }
@@ -709,9 +767,7 @@ body {
     .mapa iframe {
         height: 40vh;
     }
-    .intro h2 {
-        margin: 0px 10px;
-    }
+
 
     .cennik table td, .cennik table th {
         font-size: 0.8rem;
@@ -753,3 +809,4 @@ body {
     font-size: 1rem;
     color: white;
 }
+/*jakubposivak-zadanie2*/

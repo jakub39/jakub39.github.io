@@ -451,6 +451,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media screen and (max-width:767px){
+    .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+        background-attachment: scroll;
+    }
+}
 .bgimg-2 {
     background-image: url(obrazky/bazen.jpg);
     min-height: 350px;

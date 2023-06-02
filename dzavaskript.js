@@ -38,7 +38,7 @@ function reveal2() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var triggerPoint = windowHeight * 0.75; // Adjust the trigger point as needed
+    var triggerPoint = windowHeight * 0.8; // Adjust the trigger point as needed
 
     if (elementTop < triggerPoint) {
       reveals[i].classList.add("active2");
@@ -56,7 +56,7 @@ function reveal3() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var triggerPoint = windowHeight * 0.75; // Adjust the trigger point as needed
+    var triggerPoint = windowHeight * 0.8; // Adjust the trigger point as needed
 
     if (elementTop < triggerPoint) {
       reveals[i].classList.add("active3");

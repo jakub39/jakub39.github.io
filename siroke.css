@@ -107,9 +107,9 @@ body {
 /*zdola*/
 .zobrazenie {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(65px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1.3s all ease;
     transition-delay: 0.15s;
 }
 .zobrazenie.active{
@@ -120,9 +120,9 @@ body {
 /*zlava*/
 .zobrazenie2 {
     position: relative;
-    transform: translateX(-150px);
+    transform: translateX(-65px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1.3s all ease;
 }
 .zobrazenie2.active2 {
     transform: translateX(0);
@@ -132,9 +132,9 @@ body {
 /*zprava*/
 .zobrazenie3 {
     position: relative;
-    transform: translateX(150px);
+    transform: translateX(65px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1.3s all ease;
 }
 .zobrazenie3.active3 {
     transform: translateX(0);
@@ -265,6 +265,12 @@ body {
     font-weight: 600;
     padding: 30px 150px;
 }
+.p2 a {
+    color: red;
+}
+.p2 a:hover {
+    color: rgb(200, 0, 0);
+}
 
 .mapa {
     margin-bottom: 30px;
@@ -317,7 +323,7 @@ body {
 /*CENNÍK*/
 .cennik {
     padding-top: 130px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .cennik table caption {
     display: block;
@@ -347,9 +353,6 @@ body {
     font-weight: 700;
     display: flex;
     justify-content: right;
-    text-decoration: underline;
-    text-decoration-color: rgb(0, 110, 255);
-    text-decoration-thickness: 1px;
 }
 .tabulky {
     display: flex;
@@ -384,6 +387,14 @@ body {
     }
 }
 
+.p3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 1.5px;
+}
 /*ČASTI OŠOC*/
 .casti {
     background-color: white;
@@ -438,7 +449,7 @@ body {
     padding: 0px 180px;
 }
 #jedna {
-    bottom: 50px;
+    bottom: 75px;
     position: absolute;
 }
 
@@ -711,6 +722,9 @@ body {
     .lavyc table:nth-child(3) {
         opacity: 1;
         transform: none;
+    }
+    .p3 {
+        font-size: 1.3rem;
     }
     
 

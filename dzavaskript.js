@@ -69,7 +69,7 @@ window.addEventListener("scroll", reveal3);
 
 //Navbar na carouseli
 let header = document.getElementById("t");
-header.style.opacity = 0.8; //priehladnost navbaru 25%
+header.style.opacity = 0.8; //priehladnost navbaru 20%
 
 //znizenie priehladnosti na 0% pri scrolle
 window.addEventListener("scroll", function () {
